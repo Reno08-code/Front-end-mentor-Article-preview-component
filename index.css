@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-DarkB-lue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+  --fs-13:13px;
+}
+
+*,*::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
+.container-title{
+  overflow-wrap: break-word;
+}
+a{
+  text-decoration: none;
+}
+button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+body{
+  background-color: var(--Light-Grayish-Blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 13px;
+}
+.container-card{
+  width: 50%;
+  display: flex;
+  line-height: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 20px 2px var(--Grayish-Blue);
+}
+.container-card #mainImg{
+  border-radius: 10px 0 0 10px;
+}
+
+.container-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding:5%;
+  position: relative;
+
+}
+.container-content .container-title{
+font-family: "Manrope", sans-serif;
+font-weight: 700;
+margin-bottom: 5%;
+color: var(--Very-Dark-Grayish-Blue)
+}
+.container-content .container-text{
+  color: var(--Desaturated-DarkB-lue);
+  margin-bottom: 3%;
+}
+.container-content .person {
+  display: flex;
+  width: 100%;
+align-items: center;
+height: 100%;
+justify-content: space-between;
+margin-top: 5%;
+}
+
+.container-content .person .image{
+  display: flex;
+  justify-content: space-between;
+  width:50%
+  
+}
+.container-content .person .image img{
+  border-radius: 100%;
+}
+.person #btn{
+  background-color: var(--Light-Grayish-Blue);
+border-radius: 50px;
+padding: 8px;
+margin-right: 4%;
+display: inline-block;
+text-decoration: none;
+cursor: pointer;
+outline: none;
+color:white;
+border: none;
+}
+
+.person .image .name  p:nth-child(1){
+  color:var(--Very-Dark-Grayish-Blue);
+  font-weight: 700;
+}
+
+.person .image .name  p:nth-child(2){
+  color:var(--Desaturated-DarkB-lue);
+  
+}
+
+.share{
+  padding: 3%;
+  width: 50%;
+  position: absolute;
+  top:50%;
+  left:60%;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  color: var(--Grayish-Blue);
+ display: none;
+  }
+
+.share .shareSvg{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.share .trangle{
+  width:18px;
+  height: 18px;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  position: absolute;
+  top:80%;
+  transform:rotate(45deg);
+  
+}
+
+.person #btn-close{
+  background-color: var(--Light-Grayish-Blue);
+border-radius: 50px;
+padding: 8px;
+margin-right: 4%;
+display: inline-block;
+text-decoration: none;
+cursor: pointer;
+outline: none;
+color:white;
+border: none;
+display: none;
+}
+
+.share #btn-closeOne{
+  display: none;
+}
+
+@media screen and (max-width:376px) {
+  .container-card{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-card #mainImg{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .container-content{
+    margin-top: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-card .person .image{
+    width: 48%;
+  }
+  .container-card .person .image img{
+    width: 35px;
+    height: 35px;
+    
+  }
+
+  .share{
+    top:75%;
+    left:0;
+    width: 100%;
+    height: 49px;
+    border-radius: 0 0 10px 10px;
+
+  }
+
+  .share .shareSvg{
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 15%;
+  }
+
+  .share #btn-closeOne{
+    background-color: var(--Grayish-Blue);
+border-radius: 50px;
+padding: 8px;
+margin-right: 4%;
+display: inline-block;
+text-decoration: none;
+cursor: pointer;
+outline: none;
+color:white;
+border: none;
+
+  }
+  .share .trangle{
+    display: none;
+  }
+  
+}
